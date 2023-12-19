@@ -3,7 +3,7 @@ body {
   font-family: 'Inter', sans-serif;
   color: #fff;
   margin: 0;
-  background: linear-gradient(0deg, #080808, #1f1e28);
+  background: linear-gradient(0deg, #080808, #000000);
   min-height: 200vh;
 }
 
@@ -72,8 +72,10 @@ p {
 
 #avatar-container {
   height: 800px;
-  margin-top: 32px;
-  margin-bottom: 32px;
+  width: 100%;
+
+  /* margin-top: 32px; */
+  /* margin-bottom: 32px; */
   display: flex;
   align-items: center;
   justify-content: center;
