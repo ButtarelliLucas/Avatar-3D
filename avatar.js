@@ -47,7 +47,7 @@ function setupScene(gltf) {
     controls.enableDamping = true;
     controls.enablePan = false;
     controls.enableZoom = true;
-    controls.minDistance = 3.5;
+    controls.minDistance = 5;
     controls.minPolarAngle = 0.9;
     controls.maxPolarAngle = 1.4;
     controls.target = new THREE.Vector3(0, 0.75, 0);
