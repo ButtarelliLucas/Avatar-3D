@@ -16,7 +16,7 @@ function loadModel() {
     },
     (xhr) => {
       const percentLoaded = Math.round((xhr.loaded / xhr.total) * 100);
-      progressBar.innerText = `CARGANDO... ${percentLoaded}%`;
+      progressBar.innerText = `Loading...`;
       console.log(`Loading model... ${percentLoaded}%`);
     },
     (error) => {
