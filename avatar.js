@@ -6,16 +6,19 @@ window.onload = () => loadModel();
 
 function loadModel() {
   const loader = new GLTFLoader();
-  loader.load('AvatarFinal.glb',
+  const progressBar = document.getElementById('avatar-loading');
+
+  loader.load(
+    'AvatarFinal.glb',
     (gltf) => {
       setupScene(gltf);
-      document.getElementById('avatar-loading').style.display = 'none';
-    }, 
+      progressBar.style.display = 'none';
+    },
     (xhr) => {
-      const percentCompletion = Math.round((xhr.loaded / xhr.total) * 100);
-      document.getElementById('avatar-loading').innerText = `CARGANDO... ${percentCompletion}%`
-      console.log(`Loading model... ${percentCompletion}%`);
-    }, 
+      const percentLoaded = Math.round((xhr.loaded / xhr.total) * 100);
+      progressBar.innerText = `CARGANDO... ${percentLoaded}%`;
+      console.log(`Loading model... ${percentLoaded}%`);
+    },
     (error) => {
       console.log(error);
     }
