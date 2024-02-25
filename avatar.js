@@ -12,11 +12,11 @@ function loadModel() {
     'AvatarFinal.glb',
     (gltf) => {
       setupScene(gltf);
-      progressBar.style.display = 'none';
+      progressBar.style.display = 'red';
     },
     (xhr) => {
       const percentLoaded = Math.round((xhr.loaded / xhr.total) * 100);
-      progressBar.innerText = `Loading...`;
+      progressBar.innerText = `CARGANDO...`;
       console.log(`Loading model... ${percentLoaded}%`);
     },
     (error) => {
